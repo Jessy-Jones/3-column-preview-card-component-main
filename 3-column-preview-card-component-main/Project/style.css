@@ -1,0 +1,108 @@
+body {
+  background-color: hsl(0, 0%, 95%);
+}
+.main {
+  width: 1000px;
+  height: auto;
+  border: 1px;
+  margin: auto;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0px;
+  font-family: sans-serif;
+}
+.sedans {
+  width: 333px;
+  height: 500px;
+  border: 1px;
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.suvs {
+  width: 333px;
+  height: 500px;
+  border: 1px;
+  background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+  width: 334px;
+  height: 500px;
+  border: 1px;
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.icon {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+h1 {
+  color: hsl(0, 0%, 95%);
+  padding-left: 50px;
+  font-weight: 700;
+}
+.content {
+  color: hsla(0, 0%, 100%, 0.75);
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 25px;
+  font-size: 15px;
+}
+.sedans-button {
+  margin-top: 70px;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  color: hsl(31, 77%, 52%);
+}
+.suvs-button {
+  margin-top: 70px;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  color: hsl(184, 100%, 22%);
+}
+.luxury-button {
+  margin-top: 70px;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  color: hsl(179, 100%, 13%);
+}
+button:hover {
+  color: hsl(0, 0%, 95%);
+  background: none;
+  border: solid hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    padding-left: 15px;
+    margin-top: 50px;
+    grid-template-areas:
+      "sedans"
+      "suvs"
+      "luxury";
+  }
+  .sedans {
+    grid-area: sedans;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .suvs {
+    grid-area: suvs;
+    border-radius: 0%;
+  }
+  .luxury {
+    grid-area: luxury;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+}
